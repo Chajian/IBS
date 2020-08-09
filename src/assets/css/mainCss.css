@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 0
+
+}
+
+.top {
+    text-decoration: none;
+    background-color: rgb(43, 42, 42);
+    width: 100%;
+    height: 10%;
+    color: white;
+}
+
+.iconfontOne {
+    font-family: "iconfont", serif !important;
+    font-size: 55px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    text-decoration: transparent;
+}
+
+.iconfontTwo {
+    font-family: "iconfont", serif !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.4px;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgb(95, 94, 94);
+}
+
+a {
+    text-decoration: none;
+    text-align: left;
+}
+
+li {
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+
+ol {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.topPadding {
+    padding: 1px 40px;
+}
+
+.direction-left {
+    position: absolute;
+    top: 500px;
+    left: 1%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    float: left;
+}
+
+.images {
+    width: 1800px;
+    height: 800px;
+    background-position-x: 200px;
+}
+
+.direction-right {
+    position: absolute;
+    top: 500px;
+    left: 95%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+.direction-left:active > i {
+    color: yellowgreen;
+}
+
+.direction-right:active > i {
+    color: yellowgreen;
+}
+
+.left, .right {
+    color: rgba(44, 43, 43, 0.699);
+}
+
+.placard {
+    background-image: url(../home/placard.png);
+    background: #FFEFBA; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    width: 1800px;
+    height: 780px;
+    text-align: center;
+}
+.notice {
+    background-color: rgba(43, 42, 42, 0.651);
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    word-wrap: break-word;
+    width: 50px;
+    height: 240px;
+    float: right;
+}
+
+.allNotice {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    right: 8px;
+
+}
+
+.VueNotice {
+    font-size: 20px;
+    width: 150px;
+    height: 240px;
+    background-color: rgba(43, 42, 42, 0.651);
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid gray;
+}
+
+body {
+    width: 100%;
+    min-width: 1600px;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.Introduction {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    left: 1000px;
+    background-color: rgba(41, 40, 40, 0.514);
+}
+
+.Notice {
+    width: 811px;
+    height: 243px;
+    position: absolute;
+    top: 1080px;
+    left: 450px;
+    text-align: center;
+}
+
+.NoticeTop {
+    border: 1px solid gray;
+    display: inline-block;
+    background-color: rgba(41, 40, 40, 0.514);
+    width: 1399px;
+    height: 40px;
+    padding: 0 0;
+    margin-bottom: 20px;
+}
+
+.NoticeBlock {
+    width: 1400px;
+    height: 700px;
+    display: inline-block;
+    position: relative;
+    bottom: 700px;
+}
+
+.new {
+    width: 51px;
+    height: 31px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 8px;
+    font-weight: 800;
+}
+
+.new:hover {
+    background-color: #2bf;
+    color: black;
+}
+
+.new {
+    float: right;
+}
+
+.banner {
+    background-color: rgba(41, 40, 40, 0.904);
+    width: 1400px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news {
+    background-color: rgba(41, 40, 40, 0.767);
+    width: 464px;
+    height: 210px;
+    display: inline-block;
+    border: 1px solid rgb(53, 53, 53);
+}
+
+.aFile {
+    width: 464px;
+    height: 210px;
+    font-size: 16px;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.RankingBlock {
+    display: inline-block;
+    font-size: 25px;
+    width: 300px;
+    height: 600px;
+    background-color: rgba(41, 40, 40, 0.767);
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 60px;
+    font-weight: 800;
+    padding-top: 25px;
+
+}
+
+.Ranking {
+    text-align: center;
+    background-image: url(../home/Ranking.jpg);
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    width: 1800px;
+    height: 900px;
+}
+
+.playGame {
+    width: 1900px;
+    height: 800px;
+    background-image: url(../home/playGame.jpg);
+    background-size: 1800px;
+    background-position-y: -200px;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.Game {
+    background-color: rgba(41, 40, 40, 0.767);
+    font-size: 25px;
+    padding-top: 15px;
+    width: 1500px;
+    height: 600px;
+    position: relative;
+    left: 133px;
+    top: 80px;
+}
+
+.ul {
+    width: 250px;
+    height: 600px;
+    border-right: 1px solid rgba(41, 40, 40, 0.767);
+}
+
+.ul-i {
+    display: inline-block;
+    width: 248px;
+    height: 40px;
+    font-weight: 800;
+    font-size: 28px;
+    border-bottom: 1px solid gray;
+}
+
+.ul-li {
+    background-color: rgba(41, 40, 40, 0.767);
+    width: 248px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid rgba(41, 40, 40, 0.767);
+}
+
+.ulInlineBlock {
+    display: inline-block;
+    width: 300px;
+}
+
+.aFile:hover {
+    background-color: #2bf;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 9px
+}
+
+::-webkit-scrollbar-track {
+    border-radius: .25em;
+    background-color: rgba(41, 40, 40, 0.767);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2bf;
+    border-radius: 5px;
+}
+
+.ul-li:hover {
+    background-color: #2bf;
+    color: black;
+    text-align: center;
+}
+
+a:hover > i {
+    color: yellowgreen;
+}
+
+.title-top {
+    position: absolute;
+    top: 10px;
+}
+.image {
+    width: 1800px;
+    height: 800px;
+    overflow: hidden;
+}
+.images {
+    display: inline-block;
+}
