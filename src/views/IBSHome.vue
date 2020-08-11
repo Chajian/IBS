@@ -40,6 +40,15 @@
 				<i class="iconfontTwo colorWhite">团队</i>
 			</a>
 		</li>
+        <li class="topPadding">
+            <a class="luntanneibu">
+                <router-link to="/login">
+                    <i class="iconfontOne colorWhite">&#xe624;</i>
+                    <br/>
+                    <i class="iconfontTwo colorWhite">登陆</i>
+                </router-link>
+            </a>
+        </li>
 	</ul>
 </div>
 <div class="image">
@@ -152,6 +161,15 @@
 </template>
 
 <script>
+export default {
+    data:function () {
+        return{
+
+        }
+    }
+}
+
+
 </script>
 
 <style>
