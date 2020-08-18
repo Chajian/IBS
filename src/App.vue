@@ -3,8 +3,11 @@
     <div id="nav">
       <router-link to="/"></router-link>
       <!-- <router-link to="/about">About</router-link> -->
+
+
     </div>
     <router-view/>
+    <ibs-public-info/>
   </div>
 </template>
 
@@ -30,3 +33,9 @@
   color: #42b983;
 }
 </style>
+<script>
+  import IbsPublicInfo from "./components/IbsPublicInfo";
+  export default {
+    components: {IbsPublicInfo}
+  }
+</script>
