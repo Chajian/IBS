@@ -43,10 +43,10 @@ export default{
 	computed:{
 		testnummbe:{
 			get:function () {
-				return this.testnummber*10;
+				return this.$data.testnummber*10;
 			},
 			set:function (va) {
-				this.testnummber = va;
+				this.$data.testnummber = va;
 			}
 		},
 		jj:function () {
@@ -76,17 +76,20 @@ export default{
 				}
 			}
 			console.log(this.testnummbe)
+			this.testnummbe+=2
 		},
-		changeLiWidth:function () {
+		changeLiWidth:function (v) {
 			// var myjj = {
-			// 	width: '100%',
+			// 	width: 'v00%',
 			// 	height: 'auto',
 			// 	'list-style': 'none'
 			// };
 			// this.jjw = myjj;
 			// console.log('今晚肯定')
-			console.log("执行成")
-			return this.jj
+			v.testnummbe = 132;
+			console.log("执行成:"+v.testnummbe);
+
+			// return this.testnummbe
 		}
 	}
 }	

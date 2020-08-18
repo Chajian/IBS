@@ -1,12 +1,12 @@
 <template>
 <div class="loginmain">
-    <div>
+    <div v-on:click="test">
 <!--        <div class="nav">-->
 <!--            <router-link to="/navigat"></router-link>-->
 <!--             <router-link to="/about">About</router-link>-->
-            <nava id="login_nava"></nava>
+            <nava :jjw="jjw" id="login_nava" ></nava>
 <!--        </div>-->
-<!--        <router-view/>-->
+        <router-view/>
     </div>
 </div>
 </template>
@@ -19,7 +19,12 @@ export default{
     },
     data(){
         return{
-
+            testnummber: 2,
+            jjw:{
+                width: '100%',
+                height: 'auto',
+                'list-style': 'none'
+            }
         }
     },
     mounted() {
@@ -29,8 +34,14 @@ export default{
         // nava.methods.changeLiWidth('100%')
         // setInterval(function () {
         // console.log(nava.testnummbe)
-        nava.methods.changeLiWidth()
+        nava.methods.changeLiWidth(nava)
+        // console.log(this.$data.testnummber)
         // },1000);
+    },
+    methods:{
+        test:function () {
+            console.log("test login's nava",document.getElementById('login_nava').testnummber)
+        }
     }
 }
 </script>
