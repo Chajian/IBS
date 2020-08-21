@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/IBSHome.vue'
 import Login from '../views/Login.vue'
-// import LoginNavigat from '../components/navigation'
+import publicinfo from '../components/IbsPublicInfo.vue'
 
 Vue.use(VueRouter)
   const routes = [
@@ -30,6 +30,11 @@ Vue.use(VueRouter)
     //     component: LoginNavigat
     //   }
     // ]
+  },
+  {
+    path: '/publicinfo',
+    name: 'Publicinfo',
+    component: publicinfo
   }
 
 ]

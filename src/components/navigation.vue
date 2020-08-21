@@ -1,10 +1,11 @@
 <!--导航栏件组-->
 <template>
 <div id="nag">
-<li v-bind:style="jjw" v-bind:jjw="jjw">
-	<ul v-on:click="appear(item.id)" v-for="item in list" :key="item.id" v-bind:class="item.classstyle" :id="item.id" >
+<li v-bind:style="ngv_style" v-bind:ngv_style="ngv_style" v-bind:target="target" v-bind:ngv_list="ngv_list" v-bind:ngv_click="ngv_click">
+	<ul v-on:click="appear(item.id)" v-for="item in ngv_list" :key="item.id" v-bind:class="item.classstyle" :id="item.id" >
 			{{item.context}}
 	</ul>
+				
 </li>
 </div>
 </template>
@@ -12,7 +13,8 @@
 <script>
 export default{
 	props: {
-		jjw: {
+		//导航栏大小属性
+		ngv_style: {
 			type: Object,
 			default: function(){
 				return {
@@ -20,6 +22,29 @@ export default{
 					height: 'auto',
 					'list-style': 'none'
 				}
+			}
+		},
+		//导航栏自定义导航链接
+		ngv_list: {
+			type: Array,
+			default: function(){
+				return [
+					{id: 0,context: "登陆",classstyle: {option:true,checkoption:false}},
+					{id: 1,context: "注册",classstyle: {option:true,checkoption:false}}
+				]
+			}
+		},
+		ngv_click: {
+			tyep: Object,
+			default: function () {
+				return [
+				]
+			}
+		},
+		target:{
+			type: Object,
+			default: function () {
+				return{}
 			}
 		}
 		// testnummber:{
@@ -29,18 +54,12 @@ export default{
 	},
 	data:function(){
 		return{
-	// 		// 自定义导航栏大小
-	// 		nagivationss: {
-	//
-	// 		},
-			testnummber: 2,
-			list: [
-				{id: 0,context: "登陆",classstyle: {option:true,checkoption:false}},
-				{id: 1,context: "注册",classstyle: {option:true,checkoption:false}}
-			]
+			nav_style: this.nav_style,
+			nav_list: this.nav_list,
 		}
 	},
 	computed:{
+<<<<<<< HEAD
 		testnummbe:{
 			get:function () {
 				return this.$data.testnummber*10;
@@ -51,6 +70,10 @@ export default{
 		},
 		jj:function () {
 			return this.jjw;
+=======
+		ngvstyle:function () {
+			return this.ngv_style;
+>>>>>>> c41c49ab90c0d60656d1792e6e4cef7b0d487cee
 		}
 	},
 	watch:{
@@ -62,19 +85,22 @@ export default{
 		disappear:function(){
 			var uls = document.getElementsByTagName("ul");
 			for(var i = 0 ; i < uls.length ; i++){
-				this.list[i].classstyle.option = true;
-				this.list[i].classstyle.checkoption = false;
+				this.ngv_list[i].classstyle.option = true;
+				this.ngv_list[i].classstyle.checkoption = false;
 			}
 		},
 		appear:function (el) {
+
 			this.disappear()
-			for(var i = 0 ; i < this.list.length ; i++){
-				var item = this.list[i];
+			for(var i = 0 ; i < this.ngv_list.length ; i++){
+				var item = this.ngv_list[i];
 				if(item.id == el){
+					this.ngv_click.[item.id](this.target);
 					item.classstyle.option = false;
 					item.classstyle.checkoption = true;
 				}
 			}
+<<<<<<< HEAD
 			console.log(this.testnummbe)
 			this.testnummbe+=2
 		},
@@ -90,6 +116,8 @@ export default{
 			console.log("执行成:"+v.testnummbe);
 
 			// return this.testnummbe
+=======
+>>>>>>> c41c49ab90c0d60656d1792e6e4cef7b0d487cee
 		}
 	}
 }	
@@ -98,18 +126,27 @@ export default{
 
 <style scoped>
 .option{
-	width: 10%;
-	height: 7%;
 	background-color: #f0f4ff;
 	text-align: center;
 	/*float: left;*/
 	display: inline-block;
 }
 .checkoption{
-	width: 10%;
-	height: 7%;
 	background-color: #FFFFFF;
 	/*float: left;*/
 	display: inline-block;
+}
+ul{
+	width: 20%;
+	height: 100%;
+	margin-left: 2%;
+	cursor: pointer;
+	font-family: PingFangSC-Medium;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 30px;
+	align-items: center;
+}
+a{
 }
 </style>
